@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.cachingexample.data.Restaurant
-import com.example.cachingexample.databinding.RestaurentItemBinding
+import com.example.cachingexample.databinding.RestaurantItemBinding
 
 
 /**
@@ -17,7 +17,7 @@ import com.example.cachingexample.databinding.RestaurentItemBinding
  */
 class RestaurantAdapter : ListAdapter<Restaurant, RestaurantAdapter.RestaurantViewHolder>(RestaurantComparator()) {
 
-    class RestaurantViewHolder(private val binding: RestaurentItemBinding) :
+    class RestaurantViewHolder(private val binding: RestaurantItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(restaurant: Restaurant) {
@@ -44,7 +44,7 @@ class RestaurantAdapter : ListAdapter<Restaurant, RestaurantAdapter.RestaurantVi
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantViewHolder {
-        val binding = RestaurentItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = RestaurantItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return RestaurantViewHolder(binding)
     }
 
